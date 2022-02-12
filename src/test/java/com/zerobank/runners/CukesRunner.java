@@ -12,12 +12,9 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",}, //running failed test scenarios
         features = "src/test/resources/features",
         glue = "com/zerobank/stepdefinitions",
-       // dryRun = true,
-       tags = "@wip"
+        dryRun = false,
+        tags = "@wip"
 )
-
-
-
 
 
 public class CukesRunner {
