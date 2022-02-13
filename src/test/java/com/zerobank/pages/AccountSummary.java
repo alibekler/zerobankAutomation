@@ -28,6 +28,9 @@ public class AccountSummary extends Basepage {
     @FindBy(xpath = "(//th)[9]")
     public WebElement balanceCol;
 
+    @FindBy(xpath = "//a[.='Savings']")
+    public WebElement savings;
+
     public List<WebElement> getCredAccCols() {
         List<WebElement> credAccCols = new ArrayList<>();
         credAccCols.add(accountCol);

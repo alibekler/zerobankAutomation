@@ -7,15 +7,18 @@ Feature: Account Activity features
 
 
   Scenario: Verify title
+    When navigate to "Account Activity"
     Then verify that title is "Zero - Account Activity"
 
 
   Scenario: Account dropdown default option should be Savings.
-    When verify that title is "Zero - Account Activity"
+    When navigate to "Account Activity"
+    And verify that title is "Zero - Account Activity"
     Then the default dropdown option should be "Savings"
 
 
     Scenario: Account dropdown options
+      When navigate to "Account Activity"
       When verify that title is "Zero - Account Activity"
       Then dropdown should have following options
         | Savings     |
@@ -24,9 +27,10 @@ Feature: Account Activity features
         | Credit Card |
         | Brokerage   |
 
-  @wip
+
     Scenario: Transactions table should have following columns
-      When verify that title is "Zero - Account Activity"
+    When navigate to "Account Activity"
+    And verify that title is "Zero - Account Activity"
       Then transactions table has following tables
         | Date        |
         | Description |
